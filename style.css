@@ -1,5 +1,11 @@
 /* Do not change this file for this exercise*/
 
+@media screen and (max-width: 400px) {
+    .board {
+        flex-direction: column;
+    }
+}
+
 .board {
     display: flex;
 }
@@ -20,10 +26,6 @@
     text-align: center;
     min-width: 4em;
     height: 1em;
-}
-
-.task-form-row {
-    display: flex;
 }
 
 .left-side {

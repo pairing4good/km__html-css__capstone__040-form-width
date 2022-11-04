@@ -37,12 +37,13 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe('the board class', () => {
-  it('should display the kanban columns vertically when the screen is a maximum width of 400px', async () => {
-    const numberFound = await page.$eval('style', (style) => {
-      return style.innerHTML.match(/@media.*(.*max-width.*:.*400px.*).*{[\s\S][^}]*\.board.*{[\s\S][^}]*flex-direction.*:.*column.*;/g).length;
+describe('the task-form-row class', () => {
+  it('should have a maximum width of 625px', async () => {
+    const maxWidth = await page.$eval('.task-form-row', (row) => {
+      var style = window.getComputedStyle(row);
+      return style.getPropertyValue('max-width');
     });
-    
-    expect(numberFound).toBe(1);
+      
+    expect(maxWidth).toBe('625px');
   });
 });
