@@ -1,0 +1,51 @@
+/* Do not change this file for this exercise*/
+
+.board {
+    display: flex;
+}
+
+.card {
+    border: solid;
+    margin: 10px;
+    box-shadow: 3px 3px lightgray;
+    padding: 10px;
+}
+
+.column {
+    min-width: 175px;
+}
+
+.task-status {
+    border-radius: 10px;
+    text-align: center;
+    min-width: 4em;
+    height: 1em;
+}
+
+.task-form-row {
+    display: flex;
+}
+
+.left-side {
+    flex: 90%;
+}
+
+.right-side {
+    flex: 10%;
+}
+
+div {
+    padding: 5px;
+}
+
+.todo {
+    background-color: red;
+}
+
+.doing {
+    background-color: yellow;
+}
+
+.done {
+    background-color: green;
+}
